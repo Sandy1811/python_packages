@@ -1,0 +1,66 @@
+# This file created by conda-build 3.7.1
+# meta.yaml template originally from:
+# C:\ci\containers\00001c7bu08\tmp\build\80754af9\rsync-recipes\jupyter_client-5.2.3-python_3.5-on-winbuilder, last modified Mon Mar 19 13:26:04 2018
+# ------------------------------------------------
+
+package:
+    name: jupyter_client
+    version: 5.2.3
+source:
+    fn: jupyter_client-5.2.3.tar.gz
+    sha256: 27befcf0446b01e29853014d6a902dd101ad7d7f94e2252b1adca17c3466b761
+    url: https://pypi.io/packages/source/j/jupyter_client/jupyter_client-5.2.3.tar.gz
+build:
+    entry_points:
+        - jupyter-kernelspec = jupyter_client.kernelspecapp:KernelSpecApp.launch_instance
+        - jupyter-run = jupyter_client.runapp:main
+    number: '0'
+    script: pip install --no-deps .
+    string: py35_0
+requirements:
+    host:
+        - certifi 2018.1.18 py35_0
+        - pip 9.0.1 py35_5
+        - python 3.5.5 h0c2934d_1
+        - setuptools 38.5.1 py35_0
+        - vc 14 h0510ff6_3
+        - vs2015_runtime 14.0.25123 3
+        - wheel 0.30.0 py35h38a90bc_1
+        - wincertstore 0.2 py35hfebbdb8_0
+    run:
+        - jupyter_core
+        - python >=3.5,<3.6.0a0
+        - python-dateutil >=2.1
+        - pyzmq >=13
+        - tornado
+        - traitlets
+test:
+    commands:
+        - jupyter kernelspec list
+        - jupyter run -h
+    imports:
+        - jupyter_client
+about:
+    description: 'jupyter client contains the reference implementation of the Jupyter
+
+        protocol.It also provides Python API for starting, managing and
+
+        communicating with Jupyter kernels.
+
+        '
+    dev_url: https://github.com/jupyter/jupyter_client
+    doc_source_url: https://github.com/jupyter/jupyter_client/blob/master/docs/index.rst
+    doc_url: http://jupyter-client.readthedocs.org/
+    home: http://jupyter.org
+    license: BSD 3-clause
+    license_file: COPYING.md
+    summary: Jupyter protocol implementation and client libraries
+extra:
+    copy_test_source_files: true
+    final: true
+    recipe-maintainers:
+        - carreau
+        - jakirkham
+        - minrk
+        - ocefpaf
+        - pelson

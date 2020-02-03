@@ -1,0 +1,59 @@
+{% set version = "5.3.4" %}
+
+package:
+  name: jupyter_client
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/j/jupyter_client/jupyter_client-{{ version }}.tar.gz
+  sha256: 60e6faec1031d63df57f1cc671ed673dced0ed420f4377ea33db37b1c188b910
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  entry_points:
+    - jupyter-kernelspec = jupyter_client.kernelspecapp:KernelSpecApp.launch_instance
+    - jupyter-run = jupyter_client.runapp:main
+    - jupyter-kernel = jupyter_client.kernelapp:main
+
+requirements:
+  host:
+    - python
+    - pip
+  run:
+    - python
+    - pywin32 >=1.0  # [win]
+    - traitlets
+    - jupyter_core >=4.6.0
+    - python-dateutil >=2.1
+    - pyzmq >=13
+    - tornado >=4.1
+
+test:
+  commands:
+    - jupyter kernelspec list
+    - jupyter run -h
+  imports:
+    - jupyter_client
+
+about:
+  home: http://jupyter.org
+  license: BSD 3-clause
+  license_file: COPYING.md
+  summary: Jupyter protocol implementation and client libraries
+  description: |
+    jupyter client contains the reference implementation of the Jupyter
+    protocol.It also provides Python API for starting, managing and
+    communicating with Jupyter kernels.
+  doc_url: http://jupyter-client.readthedocs.org/
+  doc_source_url: https://github.com/jupyter/jupyter_client/blob/master/docs/index.rst
+  dev_url: https://github.com/jupyter/jupyter_client
+
+extra:
+  recipe-maintainers:
+    - jakirkham
+    - minrk
+    - pelson
+    - ocefpaf
+    - carreau
+    - SylvainCorlay

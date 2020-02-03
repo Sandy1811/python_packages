@@ -1,0 +1,30 @@
+{
+  "arch": "x86_64",
+  "build": "py35_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/win-64",
+  "constrains": [],
+  "depends": [
+    "jupyter_core",
+    "python >=3.5,<3.6.0a0",
+    "python-dateutil >=2.1",
+    "pyzmq >=13",
+    "tornado",
+    "traitlets"
+  ],
+  "features": "",
+  "fn": "jupyter_client-5.2.3-py35_0.conda",
+  "legacy_bz2_md5": "01843fa0a20a07a91a042daaa2f2a4de",
+  "legacy_bz2_size": 193642,
+  "license": "BSD 3-clause",
+  "md5": "a55b26f950486b02ccd5303c949861d7",
+  "name": "jupyter_client",
+  "platform": "win32",
+  "sha256": "7068df8b9aaccd803aab1bae59c744865b487778755010fc8319943d594920b9",
+  "size": 188170,
+  "subdir": "win-64",
+  "timestamp": 1521484436677,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/win-64/jupyter_client-5.2.3-py35_0.conda",
+  "version": "5.2.3"
+}

@@ -1,0 +1,27 @@
+{
+  "build": "py37_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/win-64",
+  "constrains": [],
+  "depends": [
+    "jupyter_core",
+    "python >=3.7,<3.8.0a0",
+    "python-dateutil >=2.1",
+    "pywin32",
+    "pyzmq >=13",
+    "tornado >=4.1",
+    "traitlets"
+  ],
+  "features": "",
+  "fn": "jupyter_client-5.3.3-py37_1.tar.bz2",
+  "license": "BSD 3-clause",
+  "md5": "bb2d793d520ca22ca96e54d269e88eef",
+  "name": "jupyter_client",
+  "sha256": "104e80181b56e503dd79467b9f20b7108973a03534f19209b25395c281de6abc",
+  "size": 165478,
+  "subdir": "win-64",
+  "timestamp": 1569447800302,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/win-64/jupyter_client-5.3.3-py37_1.tar.bz2",
+  "version": "5.3.3"
+}
